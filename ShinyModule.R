@@ -333,6 +333,7 @@ shinyModule <- function(input, output, session, data) {
   # drawn / uploaded boundary
   drawn_boundary <- reactiveVal(NULL)
   
+  # no `ignoreInit`: restored settings deliver the drawn polygon as the initial value
   observeEvent(input$leafmap_draw_all_features, {
     fc <- input$leafmap_draw_all_features
     
@@ -343,7 +344,7 @@ shinyModule <- function(input, output, session, data) {
     }
     
     applied(FALSE)
-  }, ignoreInit = TRUE)
+  })
   
   observeEvent(input$boundary_method, {  applied(FALSE) }, ignoreInit = TRUE)
   
