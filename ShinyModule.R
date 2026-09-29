@@ -252,8 +252,7 @@ shinyModuleUserInterface <- function(id, label = NULL, ...) {
 
 shinyModule <- function(input, output, session, data) {
   ns <- session$ns
-  setBookmarkExclude("upload_user_polygon")
-  
+
   if (is.null(data) || nrow(data) == 0) {
     message("Input is NULL or has 0 rows.")
     return(reactive(NULL))
