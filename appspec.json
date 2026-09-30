@@ -14,8 +14,7 @@
     { "name": "webshot2" },
     { "name": "shinycssloaders" },
     { "name": "shinybusy" },
-    { "name": "jsonlite" },
-    { "remotes": "install_github('movestore/moveapps-sdk-r-package@v1.1.0-RC2', upgrade = 'never')" }
+    { "name": "jsonlite" }
   ]
 },
   "license": {
